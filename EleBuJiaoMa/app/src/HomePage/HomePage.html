@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="location">
+        <span>当前位置:</span>
+        <span class="location-current"><a href="">徐汇区龙华徐汇苑大厦(中山南二路南)</a></span>
+        <span class="location-change"><a href="">[切换地址]</a></span>
+    </div>
+    <div class="search">
+        <a class="place-search-btn" title="搜索商家或美食" ng-click="changeSearchChars()"><img src="res/drawable/ic_search.png"></a>
+        <input ng-focus="focusChange()" ng-blur="focusChange()" ng-class="{true: 'am', false: ''}[hasFocus]"
+               class="place-search-input ng-pristine ng-valid" ng-model="inputSearchChars"
+               placeholder="搜索商家,美食...">
+    </div>
+    <div class="clear"></div>
+    <div class="banner">
+        <ul class="banner-list" ng-style="bannerStyle">
+            <li ng-repeat="bannerData in bannerDatas"><a href="{{bannerData.hrefUrl}}"><img src="{{bannerData.imgUrl}}"></a>
+            </li>
+        </ul>
+        <ol class="banner-ctrl">
+            <li ng-class="{'isThisIndex': ($index == currentIndex)}" ng-repeat="pagenum in [1, 2, 3, 4]"
+                ng-click="changeBannerTop($index)"><a href="">{{pagenum}}</a></li>
+        </ol>
+    </div>
+    <div class="clearfix top_tab">
+        <div class="tab">
+            <a href="">外卖商家</a>
+            <a target="_blank"
+               href="http://t.dianping.com/home?latitude=31.17878&longitude=121.44316&distance=500&utm_source=eleme1&utm_medium=eleme&utm_term=pc&utm_content=1&utm_campaign=f">附近的团购</a>
+        </div>
+        <div class="fetchtakeout">
+            <a href=""><img src="https://static11.elemecdn.com/eleme/desktop/media/img/takeout.f58d1e.png" alt="谁去拿外卖"></a>
+        </div>
+    </div>
+    <div ng-controller="businessCtrl" ng-include="'components/BusinessWrapper.html'"></div>
+</div>

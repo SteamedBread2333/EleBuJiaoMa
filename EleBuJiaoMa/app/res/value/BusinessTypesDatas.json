@@ -1,0 +1,299 @@
+[
+  {
+    "id": "",
+    "name": "全部商家",
+    "types": []
+  },
+  {
+    "id": "1",
+    "name": "品牌商家",
+    "types": []
+  },
+  {
+    "id": "2",
+    "name": "快餐类",
+    "types": [
+      {
+        "id": "",
+        "name": "全部快餐",
+        "parent_id": "2"
+      },
+      {
+        "id": "1",
+        "name": "品牌快餐",
+        "parent_id": "2"
+      },
+      {
+        "id": "2",
+        "name": "中式炒菜",
+        "parent_id": "2"
+      },
+      {
+        "id": "3",
+        "name": "盖浇饭",
+        "parent_id": "2"
+      },
+      {
+        "id": "4",
+        "name": "米粉面馆",
+        "parent_id": "2"
+      },
+      {
+        "id": "5",
+        "name": "麻辣烫",
+        "parent_id": "2"
+      },
+      {
+        "id": "6",
+        "name": "香锅",
+        "parent_id": "2"
+      },
+      {
+        "id": "7",
+        "name": "披萨意面",
+        "parent_id": "2"
+      },
+      {
+        "id": "8",
+        "name": "包子粥店",
+        "parent_id": "2"
+      },
+      {
+        "id": "9",
+        "name": "汉堡",
+        "parent_id": "2"
+      },
+      {
+        "id": "10",
+        "name": "烧烤",
+        "parent_id": "2"
+      },
+      {
+        "id": "11",
+        "name": "饺子馄饨",
+        "parent_id": "2"
+      },
+      {
+        "id": "12",
+        "name": "生煎锅贴",
+        "parent_id": "2"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "正餐类",
+    "types": [
+      {
+        "id": "",
+        "name": "全部正餐类",
+        "parent_id": "3"
+      },
+      {
+        "id": "1",
+        "name": "川湘菜",
+        "parent_id": "3"
+      },
+      {
+        "id": "2",
+        "name": "粤菜",
+        "parent_id": "3"
+      },
+      {
+        "id": "3",
+        "name": "日韩料理",
+        "parent_id": "3"
+      },
+      {
+        "id": "4",
+        "name": "西餐",
+        "parent_id": "3"
+      },
+      {
+        "id": "5",
+        "name": "海鲜",
+        "parent_id": "3"
+      },
+      {
+        "id": "6",
+        "name": "江浙菜",
+        "parent_id": "3"
+      },
+      {
+        "id": "7",
+        "name": "火锅",
+        "parent_id": "3"
+      },
+      {
+        "id": "8",
+        "name": "云南菜",
+        "parent_id": "3"
+      },
+      {
+        "id": "9",
+        "name": "西北菜",
+        "parent_id": "3"
+      },
+      {
+        "id": "10",
+        "name": "鲁菜",
+        "parent_id": "3"
+      },
+      {
+        "id": "11",
+        "name": "东北菜",
+        "parent_id": "3"
+      },
+      {
+        "id": "12",
+        "name": "清真",
+        "parent_id": "3"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "小吃零食",
+    "types": [
+      {
+        "id": "",
+        "name": "全部小吃零食",
+        "parent_id": "4"
+      },
+      {
+        "id": "1",
+        "name": "地方小吃",
+        "parent_id": "4"
+      },
+      {
+        "id": "2",
+        "name": "炸鸡炸串",
+        "parent_id": "4"
+      },
+      {
+        "id": "3",
+        "name": "鸭脖卤味",
+        "parent_id": "4"
+      },
+      {
+        "id": "4",
+        "name": "小龙虾",
+        "parent_id": "4"
+      },
+      {
+        "id": "5",
+        "name": "零食",
+        "parent_id": "4"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "甜品饮品",
+    "types": [
+      {
+        "id": "",
+        "name": "全部甜品饮品",
+        "parent_id": "5"
+      },
+      {
+        "id": "1",
+        "name": "饮品",
+        "parent_id": "5"
+      },
+      {
+        "id": "2",
+        "name": "甜品",
+        "parent_id": "5"
+      },
+      {
+        "id": "3",
+        "name": "咖啡",
+        "parent_id": "5"
+      },
+      {
+        "id": "4",
+        "name": "点心",
+        "parent_id": "5"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "果蔬生鲜",
+    "types": [
+      {
+        "id": "",
+        "name": "全部果蔬生鲜",
+        "parent_id": "6"
+      },
+      {
+        "id": "1",
+        "name": "水果",
+        "parent_id": "6"
+      },
+      {
+        "id": "2",
+        "name": "生鲜",
+        "parent_id": "6"
+      },
+      {
+        "id": "3",
+        "name": "蔬菜",
+        "parent_id": "6"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "鲜花蛋糕",
+    "types": [
+      {
+        "id": "",
+        "name": "全部鲜花蛋糕",
+        "parent_id": "7"
+      },
+      {
+        "id": "1",
+        "name": "鲜花",
+        "parent_id": "7"
+      },
+      {
+        "id": "2",
+        "name": "蛋糕",
+        "parent_id": "7"
+      },
+      {
+        "id": "3",
+        "name": "面包",
+        "parent_id": "7"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "超市便利店",
+    "types": [
+      {
+        "id": "",
+        "name": "全部超市便利店",
+        "parent_id": "8"
+      },
+      {
+        "id": "1",
+        "name": "便利店",
+        "parent_id": "8"
+      },
+      {
+        "id": "2",
+        "name": "超市",
+        "parent_id": "8"
+      },
+      {
+        "id": "3",
+        "name": "水站",
+        "parent_id": "8"
+      }
+    ]
+  }
+]

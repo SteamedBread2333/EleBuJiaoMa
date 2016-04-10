@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="components/BusinessStyle.css">
+<link rel="stylesheet" href="components/StarStyle.css">
+<div class="business-switcher">
+    <div class="excavator-filter">
+        <span class="excavator-filter-name">商家分类:</span>
+        <a href="" class="excavator-filter-item"
+           ng-class="{'focus':currentBusinessType.id === type.id && currentBusinessType.types.length === 0, 'active':currentBusinessType.id == type.id && currentBusinessType.types.length > 0 , 'premium':currentBusinessType.id != type.id && type.id == 1}"
+           ng-click="changeCurrentType(type)" ng-repeat="type in types" ng-bind="type.name"></a>
+        <div class="excavator-filter-subbox" ng-show="currentTags.length > 0">
+            <a href="" class="excavator-filter-item"
+               ng-class="{'focus':currentTag.id == tag.id , 'active':currentTag.id != tag.id}"
+               ng-repeat="tag in currentTags" ng-bind="tag.name" ng-click="changeCurrentTag(tag)"></a>
+        </div>
+    </div>
+    <div class="excavator-other-filter">
+        <div class="excavator-orderby">
+            <a class="excavator-sort-item" href="" ng-class="{'focus':orderByIndex == 0}"
+               ng-click="changeOrderByIndex(0)">默认排序</a>
+            <a class="excavator-sort-item" href="" ng-class="{'focus':orderByIndex == 1}"
+               ng-click="changeOrderByIndex(1)">销量高</a>
+            <a class="excavator-sort-item" href="" ng-class="{'focus':orderByIndex == 2}"
+               ng-click="changeOrderByIndex(2)">评价好</a>
+            <div style="display: inline-block" class="excavator-sort-orderby-item"
+                 ng-mouseover="showOtherOrderBy = true" ng-mouseleave="showOtherOrderBy = false"
+            ><a
+                    class="excavator-sort-item" href="JavaScript:"
+                    ng-class="{'focus':orderByIndex == 3}"><span
+                    ng-bind="otherOrderBy || '其他排序'">其他排序</span><span
+                    class="img-aw" class="top"
+                    ng-class="{'focus' : showOtherOrderBy}">^</span>
+            </a>
+                <div class="excavator-pop"
+                     ng-if="showOtherOrderBy">
+                    <a style="display: block" href=""
+                       ng-click="changeOtherOrderBy(0)" ng-class="{'focus':otherOrderByIndex == 0}">距离最近</a>
+                    <a style="display: block" href=""
+                       ng-click="changeOtherOrderBy(1)" ng-class="{'focus':otherOrderByIndex == 1}">配送速度</a>
+                    <a style="display: block" href=""
+                       ng-click="changeOtherOrderBy(2)" ng-class="{'focus':otherOrderByIndex == 2}">起送金额</a>
+                </div>
+            </div>
+            <div style="display: inline-block" class="excavator-sort-freight-item"
+                 ng-mouseover="showFreightOrderBy = true" ng-mouseleave="showFreightOrderBy = false">
+                <a class="excavator-sort-item" href="" id="freight" ng-class="{'focus':freightFilterIndex != 0}"><span
+                        for="freight"
+                        style="text-decoration: none">起送价格:{{freightFilter}}</span><span
+                        class="img-aw" class="top" ng-class="{'focus' : showFreightOrderBy}">^</span></a>
+                <div class="excavator-pop"
+                     ng-if="showFreightOrderBy" style="width: 117px">
+                    <a style="display: block" href="" ng-click="changeFreightFilter(0)">不限</a>
+                    <a style="display: block" href="" ng-click="changeFreightFilter(1)"
+                       ng-class="{'focus':freightFilterIndex == 1}">15元以下</a>
+                    <a style="display: block" href="" ng-click="changeFreightFilter(2)"
+                       ng-class="{'focus':freightFilterIndex == 2}">20元以下</a>
+                    <a style="display: block" href="" ng-click="changeFreightFilter(3)"
+                       ng-class="{'focus':freightFilterIndex == 3}">30元以下</a>
+                    <a style="display: block" href="" ng-click="changeFreightFilter(4)"
+                       ng-class="{'focus':freightFilterIndex == 4}">40元以下</a>
+                </div>
+            </div>
+            <div class="excavator-option">
+                <label class="excavator-option-item"><input ng-model="option.new" type="checkbox">新开商家</label>
+                <label class="excavator-option-item"><input ng-model="option.freeDeliver" type="checkbox">免配送费</label>
+                <label class="excavator-option-item"><input ng-model="option.eps" type="checkbox">蜂鸟专送</label>
+                <label class="excavator-option-item"><input ng-model="option.receipt" type="checkbox">可开发票</label>
+                <label class="excavator-option-item"><input ng-model="option.payOnline" type="checkbox">在线支付</label>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="place-tips" ng-if="showPlaceTips">
+    <span ng-if="showPlaceTips">想吃好点的，看看附近 <var>{{store_num}}家</var> 品牌商家吧，<a href="">立即查看</a></span>
+</div>
+<div class="place-rstbox clearfix ">
+    <div class="clearfix" id="business-list">
+        <a class="rstblock" href=""
+           ng-repeat="store in stores | filter:businessTypeFilter | orderBy:orderByProp:true | orderBy:otherOrderByProp | filter:priceOfStartSendFilter | filter:optionFilter | filter:search"
+           ng-mouseover="showFloatPop(store  ,$index)" ng-mouseleave="hideFloatPop()">
+            <div class="rstblock-logo">
+                <img src="{{store.act_img}}">
+                <div class="elemeicon elemeicon-premiumsign rstblock-logo-premiumsign"
+                     ng-if="showElemeicon(store)"></div>
+                <span ng-show="store.speed_time != -1"
+                      style="display: block;margin-top: 5px">{{store.speed_time}}分钟</span>
+            </div>
+            <div class="rstblock-content">
+                <div class="rstblock-title">{{store.name}}</div>
+                <div star rating-value=store.judge_score max="max" class="starrating"></div>
+                <span class="rstblock-monthsales">月售{{store.volume_num}}单</span>
+                <div class="rstblock-cost">{{store.start_send_amount}}元起送/配送费{{store.send_amount}}元</div>
+                <div class="rstblock-activity">
+                    <i style="background:#f4a937;" ng-if="store.zhuan">专</i>
+                    <i style="background:#f07373;" ng-if="store.jian">减</i>
+                    <i style="background:#3cc791;" ng-if="store.zen">赠</i>
+                    <i style="background:#70bc46;" ng-if="store.shou">首</i>
+                    <i style="background:#f1884f;" ng-if="store.te">特</i>
+                    <i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;" ng-if="store.fu">付</i>
+                    <i style="background:#fff;color:#9071CB;border:1px solid;padding:0;" ng-if="store.piao">票</i>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="rstpopover" style="position: fixed;width: 319px; left: 0px; top: 0px;" ng-if="isShowFloatPop"
+     ng-style="floatPopStyle" ng-class="{'placeright':isLeft , 'placeleft':!isLeft}">
+    <div class="rstpopover-arrow"></div>
+    <div class="rstpopover-title">{{store.name}}</div>
+    <div class="rstpopover-flavors"></div>
+    <ul class="rstpopover-activities">
+        <li ng-if="store.fu"><i style="background:#f07373;" >减</i>在线支付满30减5，满45减11，满60减17 <span>(手机客户端专享)</span></li>
+        <li ng-if="store.zen"><i style="background:#3cc791;" >赠</i>满25.0元赠送冰红茶1份 <span>(手机客户端专享)</span></li>
+        <li ng-if="store.zhuan"><i style="background:#f4a937;" >专</i>该商家在线支付支持使用「专享红包」 <span>(手机客户端专享)</span></li>
+        <li ng-if="store.shou"><i style="background:#70bc46;" >首</i>(不与其他活动同享)新用户下单立减15元 <span>(手机客户端专享)</span></li>
+        <li ng-if="store.te"><i style="background:#f1884f;" >特</i>(不与其它活动同享)原价47.5元超值双人组合餐，现在只要33元（在线支付专享) <span>(手机客户端专享)</span></li>
+        <li ng-if="store.fu"><i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;" >付</i>可使用支付宝、微信、手机QQ进行在线支付 <span></span></li>
+        <li ng-if="store.piao"><i style="background:#fff;color:#9071CB;border:1px solid;padding:0;" >票</i>该商家支持开发票，请在下单时填写好发票抬头
+            <span></span></li>
+    </ul>
+    <ul class="rstpopover-delivery">
+        <li><span class="color-stress plrtiny">{{store.start_send_amount}}</span>元起送</li>
+        <li>配送费<span class="color-stress plrtiny">{{store.send_amount}}</span>元</li>
+        <li>平均<span class="color-stress plrtiny">{{store.speed_time}}</span>分钟送达</li>
+    </ul>
+    <div class="rstpopover-notice">{{store.dis}}</div>
+</div>

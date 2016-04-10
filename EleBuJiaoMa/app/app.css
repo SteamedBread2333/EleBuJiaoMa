@@ -1,0 +1,121 @@
+/* app css stylesheet */
+body, button, input, select, textarea {
+    font: 400 1em/1.5 PingFang SC, Lantinghei SC, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+}
+
+article, aside, blockquote, body, button, code, dd, details, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol , ul{
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+textarea, keygen, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: PingFang SC, Lantinghei SC, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+    font-weight: 400;
+}
+
+html {
+    color: #333;
+    background: #fff;
+    text-rendering: optimizelegibility;
+    box-sizing: border-box;
+}
+
+.top_left.focus {
+    background: #006bc7;
+}
+
+.menu {
+    display: inline-flex;
+    height: 60px;
+}
+
+.container {
+    width: 1280px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+
+.top_left {
+    width: 120px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.top_right {
+    width: 100px;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 20px;
+    line-height: 60px;
+}
+
+.login {
+    float: right;
+    font-weight: 600;
+    margin-left: 180px;
+}
+
+@media screen and (max-width: 1280px) {
+    .container{
+        width: 960px;
+    }
+
+    .top_left {
+        width: 90px;
+    }
+
+    .topbar-item .elemeicon-hot {
+        right: -10px;
+    }
+
+    .top_right {
+        width: 90px;
+    }
+
+    .login {
+        margin-left: 60px
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: #f7f7f7;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+}
+
+.elemeicon-hot {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+
+.topbar-item {
+    position: relative;
+}
+
+.elemeicon {
+    background: url(https://static11.elemecdn.com/eleme/desktop/media/img/icon.d5d696.png) no-repeat;
+    background-position: 0 -228px;
+}

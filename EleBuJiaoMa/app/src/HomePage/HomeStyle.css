@@ -1,0 +1,192 @@
+.location {
+    vertical-align: middle;
+    font-size: 9pt;
+    float: left;
+
+}
+
+.location > span {
+    display: inline-block;
+    line-height: 50px;
+}
+
+.location > span:first-child {
+    color: #999;
+    margin-right: 5px;
+}
+
+.location .location-current {
+    white-space: nowrap;
+    margin-right: .5em;
+}
+
+.location-current a {
+    color: #333;
+    margin-right: 5px;
+}
+
+.location-change {
+    position: relative;
+    white-space: nowrap;
+}
+
+.location-change a {
+    color: #0089dc;
+}
+
+.search {
+    float: right;
+    margin: 10px 0;
+    height: 2pc;
+    border: 1px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+}
+
+.place-search-btn, .place-search-input {
+    padding: 0 8px;
+    margin: 4px 0;
+    border: none;
+    outline: medium;
+    line-height: 24px;
+    transition: width 0.5s ease-in-out;
+    -webkit-transition: width .5s ease-in-out;
+}
+
+.place-search-btn {
+    padding: 0;
+    margin: 0;
+    float: right;
+    width: 46px;
+    text-align: center;
+    color: #999;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: 0;
+    background-color: transparent;
+}
+
+.place-search-input {
+    width: 266px;
+}
+
+.am {
+    width: 370px;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 98px;
+    background-color: #e6e6e6;
+}
+
+.banner-list {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    transition: top .4s ease-in-out;
+    -webkit-transition: top .4s ease-in-out;
+}
+
+.banner-list li {
+    height: 98px;
+    overflow: hidden;
+}
+
+.banner-list li a img {
+    height: 98px;
+    width: 100%;
+}
+
+.banner-ctrl {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.banner-ctrl li {
+    display: inline;
+    margin-left: 5px;
+    padding: 0 5px;
+    background-color: #999999;
+    opacity: .5;
+}
+
+.banner-ctrl .isThisIndex {
+    background-color: rgba(255, 102, 0, .8);
+    opacity: 1;
+}
+
+.banner-ctrl li a {
+    text-align: center;
+    color: gainsboro;
+}
+
+.banner-ctrl .isThisIndex a {
+    color: #ffffff;
+}
+
+.top_tab {
+    margin-top: 10px;
+    border-bottom: 1px #e6e6e6 solid;
+}
+
+.tab {
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.tab a {
+    float: left;
+    color: #666;
+    padding: 0 20px;
+    display: inline-block;
+}
+
+.tab a:first-child {
+    color: #0089dc;
+    border-bottom: 3px #0089dc solid;
+    margin-bottom: -2px;
+}
+
+.fetchtakeout {
+    float: right;
+    width: 186px;
+    height: 42px;
+    margin-top: -6px;
+    margin-bottom: -13px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.fetchtakeout img {
+    width: 186px;
+    height: 55px;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    height: 0;
+    clear: both;
+}
+
+
+
+
+
+
+

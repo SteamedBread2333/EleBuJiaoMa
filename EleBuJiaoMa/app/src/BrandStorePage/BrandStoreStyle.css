@@ -1,0 +1,21 @@
+.place-tab {
+    line-height: 40px;
+    font-size: 18px;
+    border-bottom: 1px #e6e6e6 solid;
+}
+
+@media (min-width: 1260px) {
+    .container, body.hidesidebar .container {
+        width: 885pt;
+    }
+}
+
+.premium-title {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.premium-desc {
+    color: #999;
+    font-size: 14px;
+}

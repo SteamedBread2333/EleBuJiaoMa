@@ -1,0 +1,140 @@
+.footer-contect, .footer-link, .footer-mobile {
+    float: left;
+    width: 18%;
+    margin-top: 30px;
+}
+
+.footer-link-title {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.footer-link-item {
+    width: 50%;
+    font-size: 9pt;
+}
+
+.footer-contect-item, .footer-link-item {
+    color: #999;
+    display: block;
+    line-height: 24px;
+}
+
+.footer-police {
+    padding: .5em 0;
+    text-align: center;
+}
+
+.footer-mobile-icon {
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    float: left;
+}
+
+.footer-mobile {
+    width: 265px;
+}
+
+.footer-mobile {
+    float: right;
+}
+
+.footer-mobile-content {
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.footer-contect-item .icon-wechat {
+    margin-left: 5px;
+}
+
+.footer-contect-item [class^=icon-] {
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.footer-contect-item [class^=icon-]:hover, .footer-contect-item>a:hover {
+    text-decoration: none;
+}
+
+[class*=" icon-"], [class^=icon-] {
+    font-family: eleme;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.footer-mobile-content h3 {
+    font-size: 1pc;
+    color: #333;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.footer-mobile-content p {
+    font-size: 9pt;
+    color: #666;
+    margin: 3px 0 10px;
+}
+
+.footer-copyright {
+    font-size: 9pt;
+    clear: both;
+    padding-top: 60px;
+    color: #999;
+    text-align: center;
+}
+
+.serif {
+    font-family: Palatino, Optima, Georgia, serif;
+}
+
+.footer-copyright a {
+    color: inherit;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+.footer-contect-item .icon-wechat {
+    margin-left: 5px;
+}
+
+.footer-contect-item a{
+    color: #999;
+    display: inline;
+}
+
+.footer-contect-dropbox {
+    bottom: 30px;
+    left: -60px;
+    text-align: center;
+}
+
+.dropbox {
+    color: #999;
+    position: absolute;
+    background: #fff;
+    background: rgba(255, 255, 255, .98);
+    padding: 4px 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+    border: 1px solid #ddd \9;
+    border-width: 0 1px 1px \9;
+    z-index: 6;
+}
+
+.footer-contect-dropbox img {
+    width: 130px;
+    height: 130px;
+}

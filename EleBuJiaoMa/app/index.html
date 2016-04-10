@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="src/HomePage/HomeStyle.css">
+    <link rel="stylesheet" href="src/BrandStorePage/BrandStoreStyle.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <title>饿了别叫妈,叫饿了么</title>
+</head>
+<body ng-controller="myCtrl">
+<div class="top" style="background: #0089dc" ng-include="'components/HeaderWrapper.html'"></div>
+<div ng-view style="width: 100%"></div>
+<footer class="footer" ng-include="'components/FooterWrapper.html'"></footer>
+
+<!--script-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="src/HomePage/Home.js"></script>
+<script src="src/BrandStorePage/BrandStore.js"></script>
+<script src="components/StarsFun.js"></script>
+<script src="components/BusinessFun.js"></script>
+<script src="src/OrderPage/Order.js"></script>
+<script src="provider/Service.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
