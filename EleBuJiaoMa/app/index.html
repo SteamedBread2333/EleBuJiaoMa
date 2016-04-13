@@ -7,6 +7,7 @@
 <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,23 +18,30 @@
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="src/HomePage/HomeStyle.css">
     <link rel="stylesheet" href="src/BrandStorePage/BrandStoreStyle.css">
+    <link rel="stylesheet" href="src/IntegralMallPage/IntegralMallStyle.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <title>饿了别叫妈,叫饿了么</title>
 </head>
-<body ng-controller="myCtrl">
+<body ng-controller="myCtrl" infinite-scroll="changeShowBackTop()" infinite-scroll-distance="3"
+      ng-click="changeShowContent($event)">
+<div ng-controller="leftmenuCtrl" ng-include="'components/LeftMenuWrapper.html'"></div>
 <div class="top" style="background: #0089dc" ng-include="'components/HeaderWrapper.html'"></div>
-<div ng-view style="width: 100%"></div>
+<div ng-view></div>
 <footer class="footer" ng-include="'components/FooterWrapper.html'"></footer>
 
 <!--script-->
+<script src="bower_components/jquery-2.1.1/jquery.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
+<!--<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>-->
 <script src="app.js"></script>
 <script src="src/HomePage/Home.js"></script>
 <script src="src/BrandStorePage/BrandStore.js"></script>
 <script src="components/StarsFun.js"></script>
 <script src="components/BusinessFun.js"></script>
-<script src="src/OrderPage/Order.js"></script>
+<script src="components/LeftMenuFun.js"></script>
+<script src="src/IntegralMallPage/IntegralMall.js"></script>
 <script src="provider/Service.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>

@@ -1,0 +1,175 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -295px;
+    background-color: #504d53;
+    width: 330px;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    z-index: 7;
+}
+
+.sidebar-tabs img {
+    width: 20px;
+    height: 20px;
+}
+
+.toolbar-tabs-dropbox .q-img {
+    width: 130px;
+    height: 130px;
+}
+
+.toolbar-tabs-dropbox p {
+    color: #0089dc;
+}
+
+.sidebar-tabs {
+    float: left;
+    width: 35px;
+    height: 100%;
+}
+
+.toolbar-tabs-middle {
+    position: absolute;
+    width: 35px;
+    top: 50%;
+    margin-top: -220px;
+}
+
+.toolbar-tabs-bottom {
+    bottom: 10px;
+    position: absolute;
+}
+
+.toolbar-tabs-middle {
+    position: absolute;
+    width: 35px;
+    top: 50%;
+    margin-top: -220px;
+}
+
+.toolbar-btn {
+    width: 35px;
+    padding: 5px 0;
+    line-height: 35px;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.toolbar-cartbtn {
+    color: #ccc;
+    line-height: 1pc;
+    padding: 7px 8px 10px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.toolbar-separator {
+    font-size: 1px;
+    border-top: 1px solid #737074;
+    height: 0;
+    margin: 0 8px;
+}
+
+.toolbar-btn, .toolbar-cartbtn {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sidebar-btn-backtop, .toolbar-tabs-bottom .icon-QR-code {
+    position: relative;
+}
+
+.toolbar-tabs-dropbox {
+    right: 35px;
+    top: -150px;
+    line-height: 24px;
+    z-index: 9;
+}
+
+.dropbox {
+    color: #999;
+    position: absolute;
+    background: #fff;
+    background: rgba(255, 255, 255, .98);
+    padding: 4px 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+    border: 1px solid #ddd \9;
+    border-width: 0 1px 1px \9;
+    z-index: 6;
+}
+
+.sidebar-tabs a:hover {
+    background: #0089dc;
+}
+
+.toolbar-tabs-dropbox .icon-QR-code-bonus {
+    padding: 5px;
+    color: #f63;
+    font-size: 9pt;
+}
+
+.sidebar-content {
+    margin-left: 35px;
+    height: 100%;
+    width: 295px;
+    overflow: auto;
+    background-color: #e6e6e6;
+}
+
+.float-text {
+    height: 30px;
+    width: 80px;
+    background: rgba(0, 0, 0, .5);
+    padding: 4px 6px;
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center
+}
+
+.sidebarcart-caption {
+    background: #fff;
+    font-size: 16px;
+    color: #999;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebarcart-caption a{
+    color: #999;
+}
+
+.sidebarcart-caption>.icon-angle-double-right, .sidebarhistory-title>.icon-angle-double-right, .sidebarmessage-title>.icon-angle-double-right {
+    float: right;
+    cursor: pointer;
+    line-height: 20px;
+    margin-left: 15px;
+    color: #666;
+}
+.sidebarcart-notice, .sidebarhistory-notice, .sidebarmessage-notice {
+    padding: 5px 10px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+.sidebarcart-notice i, .sidebarhistory-notice i, .sidebarmessage-notice i {
+    color: #999;
+    margin: 30px auto 20px;
+    font-size: 50px;
+    display: block;
+}
+
+
+
+

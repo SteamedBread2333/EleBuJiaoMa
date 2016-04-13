@@ -15,9 +15,39 @@ angular.module('business-model')
          * @param int index    序号i
          * @param String id   父元素id
          */
-        this.getItemLoc = function getLoc(index , id) {
-            $rootScope.businessList = document.getElementById(id);
-            var e = $rootScope.businessList.children[index];
+        this.getItemLoc = function(index , id) {
+            var list = document.getElementById(id);
+            var e = list.children[index];
+            return getLocByElem(e);
+        }
+
+        /**
+         * 元素定位
+         * @param String id   元素id
+         */
+        this.getElemLocById = function(id) {
+            var e = document.getElementById(id);
+            return getLocByElem(e);
+        }
+
+        /**
+         * 元素定位
+         * @param String name   元素classname(必须唯一)
+         */
+        this.getElemLocByClassName = function(name) {
+            var e = document.getElementsByClassName(name)[0];
+            return getLocByElem(e);
+        }
+
+        /**
+         * 元素定位
+         * @param String elem   元素Dom对象
+         */
+        this.getElemLocByElem = function(elem) {
+            return getLocByElem(elem);
+        }
+
+        function getLocByElem(e){
             var offsetTop = e.getBoundingClientRect().top;
             var offsetLeft = e.getBoundingClientRect().left;
             loc = {

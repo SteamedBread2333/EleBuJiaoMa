@@ -7,13 +7,21 @@
         <a class="top_left topbar-item" href="#/BrandStorePage" ng-class="{'focus': isFocused('/BrandStorePage')}">品牌商家
             <i class="elemeicon elemeicon-hot"></i>
         </a>
-        <!--<a class="top_left" href="#/OrderPage" ng-class="{'focus': isFocused('/OrderPage')}">我的订单</a>-->
-        <a class="top_left" href="https://account.ele.me/login?redirect_url=https:%2F%2Fwww.ele.me%2Fprofile%2Forder" target="_self" ng-class="{'focus': isFocused('/OrderPage')}">我的订单</a>
+        <!--<a class="top_left" href="#/IntegralMallPage" ng-class="{'focus': isFocused('/IntegralMallPage')}">我的订单</a>-->
+        <a class="top_left" href="https://account.ele.me/login?redirect_url=https:%2F%2Fwww.ele.me%2Fprofile%2Forder"
+           target="_self" ng-class="{'focus': isFocused('/OrderPage')}">我的订单</a>
         <a class="top_left" href="https://kaidian.ele.me/" target="_blank">加盟合作</a>
-        <a class="top_right" href="#/"><img src="res/drawable/ic_gift.png"> 积分商城</a>
-        <a class="top_right" href="#/"><img src="res/drawable/ic_support.png"> 服务中心</a>
-        <a class="top_right"><img src="res/drawable/ic_mobile.png"> 手机应用</a>
-        <a class="top_right login"  href=""><img
+        <a class="top_right" href="#/IntegralMallPage"><img src="res/drawable/ic_gift.png"> 积分商城</a>
+        <a class="top_right" href="https://www.ele.me/support/center"><img src="res/drawable/ic_support.png"> 服务中心</a>
+        <a class="top_right" href="" style="position: relative" ng-mouseover="showSaoYiSao = true;"
+           ng-mouseleave="showSaoYiSao = false;"><img src="res/drawable/ic_mobile.png"> 手机应用
+            <div class="dropbox topbar-mobile-dropbox" style="top: 50px;position: absolute" ng-if="showSaoYiSao"><span>扫一扫, 手机订餐更方便</span>
+                <img src="https://static11.elemecdn.com/eleme/desktop/media/img/appqc.852963.png"
+                     class="topbar-nav-qrcode"
+                     alt="扫一扫下载饿了么手机 App" style="width: 200px;height: 200px;display: block">
+            </div>
+        </a>
+        <a class="top_right login" href=""><img
                 src="res/drawable/ic_login.png"> 登录/注册</a>
     </div>
 </div>
