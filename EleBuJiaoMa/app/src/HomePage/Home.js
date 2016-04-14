@@ -1,11 +1,13 @@
-angular.module('myApp.HomePage', ['ngRoute' , 'stars' , 'business-model'])
+angular.module('myApp.HomePage', ['ui.router' , 'stars' , 'business-model'])
 
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/HomePage', {
-            templateUrl: 'src/HomePage/HomePage.html',
+    .config(function ($stateProvider , $urlRouterProvider) {
+        $urlRouterProvider.when("", "/HomePage");
+        $stateProvider.state("HomePage", {
+            url: "/HomePage",
+            templateUrl: "src/HomePage/HomePage.html",
             controller: 'HomeCtrl'
         });
-    }])
+    })
     .controller('HomeCtrl', function ($scope, $http, $interval , $rootScope) {
         var bannerTop = 0;
         $rootScope.searchChars = "";

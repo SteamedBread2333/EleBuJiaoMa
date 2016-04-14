@@ -1,0 +1,27 @@
+.gifthistory {
+    margin-top: 15px;
+    padding: 10px 10px 20px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+}
+
+.nodata {
+    padding-top: 50px;
+    text-align: center;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .nodata-container {
+        background-image: url(//static11.elemecdn.com/eleme/desktop/media/img/nodata-2x.18ccdf.png);
+        background-size: 85px auto;
+    }
+}
+
+.nodata-container {
+    display: inline-block;
+    padding-left: 110px;
+    line-height: 115px;
+    background: url(//static11.elemecdn.com/eleme/desktop/media/img/nodata.6477c5.png) no-repeat;
+    color: #999;
+}

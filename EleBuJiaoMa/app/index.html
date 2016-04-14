@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="src/HomePage/HomeStyle.css">
     <link rel="stylesheet" href="src/BrandStorePage/BrandStoreStyle.css">
     <link rel="stylesheet" href="src/IntegralMallPage/IntegralMallStyle.css">
+    <link rel="stylesheet" href="src/IntegralMallPage/Mall/MallStyle.css">
+    <link rel="stylesheet" href="src/IntegralMallPage/MallHistory/MallHistoryStyle.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <title>饿了别叫妈,叫饿了么</title>
 </head>
@@ -26,15 +28,16 @@
       ng-click="changeShowContent($event)">
 <div ng-controller="leftmenuCtrl" ng-include="'components/LeftMenuWrapper.html'"></div>
 <div class="top" style="background: #0089dc" ng-include="'components/HeaderWrapper.html'"></div>
-<div ng-view></div>
+<div ui-view></div>
 <footer class="footer" ng-include="'components/FooterWrapper.html'"></footer>
 
 <!--script-->
 <script src="bower_components/jquery-2.1.1/jquery.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/others/ui-bootstrap-tpls.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
-<!--<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>-->
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="app.js"></script>
 <script src="src/HomePage/Home.js"></script>
 <script src="src/BrandStorePage/BrandStore.js"></script>
@@ -42,6 +45,8 @@
 <script src="components/BusinessFun.js"></script>
 <script src="components/LeftMenuFun.js"></script>
 <script src="src/IntegralMallPage/IntegralMall.js"></script>
+<script src="src/IntegralMallPage/Mall/MallFun.js"></script>
+<script src="src/IntegralMallPage/MallHistory/MallHistoryFun.js"></script>
 <script src="provider/Service.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>

@@ -1,0 +1,39 @@
+<div class="gift-filter">
+    <div class="gift-filter-sort"><span>排序:</span>
+        <button ng-class="{checked: orderBy === 'default'}" ng-click="orderByDefault()">默认排序</button>
+        <button ng-class="{checked: orderBy === 'integral_price'}" ng-click="orderByAsc()">积分升序</button>
+    </div>
+    <div class="gift-filter-sort">
+        <span>筛选:</span>
+        <select class="gift-filter-sort-points" ng-model="points">
+            <option value="0">全部积分</option>
+            <option value="1">1-1000</option>
+            <option value="2">1001-3000</option>
+            <option value="3">3001-10000</option>
+            <option value="4">10001-50000</option>
+            <option value="5">50001以上</option>
+        </select>
+    </div>
+    <div class="gift-filter-sort">
+        <label class="icanex">
+            <input type="checkbox" ng-model="icanex">只看我能兑换</label>
+    </div>
+</div>
+<div class="giftlist">
+    <a href="" class="giftlist-item"
+       ng-repeat="gift in gifts | orderBy:orderBy | filter:priceOfGiftFilter | filter:availiableFilter | filter:paginationFilter:$index">
+        <div class="giftlist-item-tip ng-scope" ng-if="gift.exchange_type">抽奖</div>
+        <img class="giftlist-img" alt="gift.name" ng-src="{{gift.act_img}}">
+        <p class="giftlist-name" ng-bind="gift.name">
+            <small ng-bind="gift.dis"></small>
+        </p>
+        <div>
+            <p class="giftlist-points" ng-bind="gift.integral_price + '积分'"></p>
+            <p class="giftlist-item-badge" ng-bind="gift.tag"></p>
+        </div>
+    </a>
+
+</div>
+<pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm"
+            boundary-links="false" rotate="true" num-pages="numPages" previous-text="&lsaquo;"
+            next-text="&rsaquo;"></pagination>

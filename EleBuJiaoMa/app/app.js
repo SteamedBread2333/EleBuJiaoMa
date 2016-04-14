@@ -1,13 +1,14 @@
 angular.module('myApp', [
-    'ngRoute',
+    'ui.router',
+    'ui.bootstrap',
     'infinite-scroll',
     'leftmenuMod',
     'myApp.HomePage',
     'myApp.BrandStorePage',
     'myApp.IntegralMallPage'
-]).config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.otherwise({redirectTo: '/HomePage'});
-}]).controller('myCtrl', function ($scope, $location, $rootScope) {
+]).config(function ($stateProvider , $urlRouterProvider) {
+    $urlRouterProvider.when("", "/HomePage");
+}).controller('myCtrl', function ($scope, $location, $rootScope) {
     $scope.ishow = false;
     $scope.isFocused = function (x) {
         if (x === $location.$$url) {

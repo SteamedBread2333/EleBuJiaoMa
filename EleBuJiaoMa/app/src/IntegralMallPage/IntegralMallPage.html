@@ -18,7 +18,10 @@
     </div>
 
     <div class="gifttab">
-        <a class="gifttab-item current" href="/gift" ng-class="{current: tab === 'list'}">积分好礼</a>
-        <a class="gifttab-item" href="/gift/record" ng-class="{current: tab === 'record'}">兑换记录</a>
+        <a class="gifttab-item" ui-sref=".MallPage" ng-class="{'current':states == 1}" ng-click="states = 1;">积分好礼</a>
+        <a class="gifttab-item" ui-sref=".MallHistoryPage" ng-class="{'current':states == 2}" ng-click="states = 2;">兑换记录</a>
+    </div>
+    <div ui-view="">
+
     </div>
 </div>
